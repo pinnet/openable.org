@@ -1,17 +1,18 @@
 #!/bin/bash
 BRANCH=${BRANCH:=""}
 REPO_URL=${REPO_URL:='https://github.com/pinnet/openable.org.git'}
-REPO_URL=${REPO_DIR:='/home/node/openable.org'}
+WORK_DIR=${WORK_DIR:='/home/node/'}
+REPO_DIR=${REPO_DIR:=${WORK_DIR}'openable.org'}
 
 echo "Setting up Repository -----------------------------------------------------"
 
 cd /home/node/ 
 
-if [ -d /root/${REPO_DIR} ]; then
+if [ -d ${REPO_DIR} ]; then
     
     echo "Repository exists, checking if up to date"
 
-    cd /root/${REPO_DIR}
+    cd ${REPO_DIR}
     
     if git pull | grep -q "Already"; then
             echo "Repository is already up to date"
