@@ -4,9 +4,10 @@ RUN apk add git
 
 WORKDIR /home/node
 
-RUN git clone https://github.com/pinnet/openable.org.git && cd ./openable.org/app && npm init
+COPY init.sh init.sh
+
+RUN chmod 700 init.sh
 
 EXPOSE 8081
 
-ENTRYPOINT ["npm start"]
-
+ENTRYPOINT ["/bin/sh", "-c", "exec /home/node/init.sh "]
