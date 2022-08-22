@@ -12,4 +12,5 @@ RUN chmod 700 init.sh
 
 EXPOSE 8081
 
-CMD ["/bin/sh", "-c init.sh"]
+ENTRYPOINT ["init.sh"]
+
