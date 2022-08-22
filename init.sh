@@ -4,7 +4,7 @@ REPO_URL=${REPO_URL:='https://github.com/pinnet/openable.org.git'}
 WORK_DIR=${WORK_DIR:='/home/node/'}
 REPO_DIR=${REPO_DIR:=${WORK_DIR}'openable.org'}
 
-echo "nameserver 8.8.8.8" > /etc/resolv.conf
+echo "nameserver 172.17.0.1" > /etc/resolv.conf
 
 echo "Setting up Repository -----------------------------------------------------"
 
