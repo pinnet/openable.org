@@ -1,6 +1,6 @@
-FROM node:18-alpine3.16
+FROM ubuntu:latest
 
-RUN apk add git bash
+RUN apt update && apt --no-install-recommends install node git npm
 
 WORKDIR /home/node
 
