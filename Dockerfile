@@ -1,6 +1,6 @@
-FROM node:18-alpine3.15
+FROM ubuntu
 
-RUN apk add git
+RUN apk add git bind-tools
 
 WORKDIR /home/node
 
