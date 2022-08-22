@@ -5,6 +5,8 @@ WORK_DIR=${WORK_DIR:='/home/node/'}
 REPO_DIR=${REPO_DIR:=${WORK_DIR}'openable.org'}
 
 echo "Setting up Repository -----------------------------------------------------"
+echo work-dir=${WORK_DIR}
+echo repo-dir=${REPO_DIR}
 
 cd /home/node/ 
 
@@ -18,7 +20,7 @@ if [ -d ${REPO_DIR} ]; then
             echo "Repository is already up to date"
     fi
 else
-    cd /root 
+    cd ${WORK_DIR} 
     echo "cloning ${BRANCH} into ${REPO_DIR}"
     
     if [[ -z "${BRANCH}" ]]; then
