@@ -17,7 +17,7 @@ if [ -d ${REPO_DIR} ]; then
     cd ${REPO_DIR}
     
     if git pull | grep -q "Already"; then
-            echo "Repository is already up to date"
+            echo "Repository is already up to date" 
     fi
 else
     cd ${WORK_DIR} 
@@ -28,10 +28,11 @@ else
     else
         git clone -b ${BRANCH} ${REPO_URL}
     fi 
+    cd ${REPO_DIR}/app
+    npm install
+
 fi
 
-cd openable.org/app
 
-npm install
-
-tail -f /home/node/init.sh
+cd ${REPO_DIR}/app
+npm start
