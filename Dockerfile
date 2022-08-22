@@ -2,7 +2,7 @@ FROM ubuntu:latest
 
 RUN apt-get update && apt-get -y --no-install-recommends install nodejs git npm
 
-RUN addgroup -g 1000 node && adduser -u 1000 -G node -s /bin/sh -D node 
+RUN adduser --uid 1000 --gid 1000 --shell /bin/bash --disabled-password node 
 
 WORKDIR /home/node
 
