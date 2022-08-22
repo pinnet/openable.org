@@ -6,9 +6,9 @@ RUN apk add git
 
 WORKDIR /home/node
 
-COPY init.sh .
+COPY init.sh /bin/init.sh
 
-RUN chmod 700 init.sh
+RUN chmod 700 /bin/init.sh
 
 EXPOSE 8081
 
