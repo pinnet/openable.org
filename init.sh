@@ -1,4 +1,5 @@
 #!/bin/bash
+BRANCH=${BRANCH:=""}
 REPO_URL=${REPO_URL:='https://github.com/pinnet/openable.org.git'}
 REPO_URL=${REPO_DIR:='/home/node/openable.org'}
 
@@ -19,7 +20,7 @@ else
     cd /root 
     echo "cloning ${BRANCH} into ${REPO_DIR}"
     
-    if [[ -z "${BRANCH}"]]
+    if [[ -z "${BRANCH}"]]; then
         git clone ${REPO_URL}
     else
         git clone -b ${BRANCH} ${REPO_URL}
