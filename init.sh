@@ -1,6 +1,8 @@
 #!/bin/sh
 
-git clone git@github.com:pinnet/openable.org.git
+cd /home/node/
+
+git clone https://github.com/pinnet/openable.org.git
 
 cd openable.org/app
 
