@@ -1,6 +1,6 @@
 FROM node:18-alpine3.16
 
-RUN apk add git bind-tools
+RUN apk add git bash
 
 WORKDIR /home/node
 
@@ -10,4 +10,4 @@ RUN chmod 700 init.sh
 
 EXPOSE 8081
 
-ENTRYPOINT ["/bin/sh", "-c", "exec /home/node/init.sh "]
+ENTRYPOINT ["/bin/bash", "-c", "exec /home/node/init.sh "]
