@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 
-RUN apt-get update && apt-get --no-install-recommends install nodejs git npm
+RUN apt-get update && apt-get -y --no-install-recommends install nodejs git npm
 
 WORKDIR /home/node
 
