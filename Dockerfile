@@ -4,6 +4,8 @@ RUN apt-get update && apt-get -y --no-install-recommends install nodejs git npm
 
 RUN addgroup --gid 1000 node && adduser --uid 1000 --gid 1000 --shell /bin/bash --disabled-password --gecos "" node 
 
+USER node
+
 WORKDIR /home/node
 
 COPY init.sh init.sh

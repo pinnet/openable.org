@@ -8,7 +8,7 @@ echo "Setting up Repository ----------------------------------------------------
 echo work-dir=${WORK_DIR}
 echo repo-dir=${REPO_DIR}
 
-cd /home/node/ 
+cd ${WORK_DIR}
 
 if [ -d ${REPO_DIR} ]; then
     
@@ -28,7 +28,8 @@ else
     else
         git clone -b ${BRANCH} ${REPO_URL}
     fi 
-    chown -R node:node ${REPO_DIR}
+    #git config --global --add safe.directory ${REPO_DIR}
+    #chown -R node:node ${REPO_DIR}
     cd ${REPO_DIR}/app
     npm install
 
