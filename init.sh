@@ -28,6 +28,7 @@ else
     else
         git clone -b ${BRANCH} ${REPO_URL}
     fi 
+    chown -R node:node ${REPO_DIR}
     cd ${REPO_DIR}/app
     npm install
 
