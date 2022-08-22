@@ -2,7 +2,7 @@
 
 cd /home/node/
 
-ping github
+tail -f /home/node/init.sh
 
 git clone https://github.com/pinnet/openable.org.git
 
