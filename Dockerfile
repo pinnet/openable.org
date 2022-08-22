@@ -12,6 +12,8 @@ RUN chmod 700 init.sh && chown node:node init.sh
 
 USER node
 
-EXPOSE 8081
+ENV PORT=8081
+
+EXPOSE ${PORT}
 
 ENTRYPOINT ["/bin/bash", "-c", "exec /home/node/init.sh "]

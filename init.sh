@@ -4,6 +4,7 @@ REPO_URL=${REPO_URL:='https://github.com/pinnet/openable.org.git'}
 WORK_DIR=${WORK_DIR:='/home/node/'}
 REPO_DIR=${REPO_DIR:=${WORK_DIR}'openable.org'}
 
+echo expose ${PORT}
 echo work-dir=${WORK_DIR}
 echo repo-dir=${REPO_DIR}
 
