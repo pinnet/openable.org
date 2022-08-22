@@ -1,5 +1,7 @@
 #!/bin/sh
 
+dig github.com
+
 cd /home/node/
 
 git clone https://github.com/pinnet/openable.org.git
