@@ -20,7 +20,7 @@ else
     cd /root 
     echo "cloning ${BRANCH} into ${REPO_DIR}"
     
-    if [[ -z "${BRANCH}"]]; then
+    if [[ -z "${BRANCH}" ]]; then
         git clone ${REPO_URL}
     else
         git clone -b ${BRANCH} ${REPO_URL}
