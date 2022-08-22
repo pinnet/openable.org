@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM node:18-alpine3.16
 
 RUN apk add git bind-tools
 
