@@ -4,12 +4,11 @@ REPO_URL=${REPO_URL:='https://github.com/pinnet/openable.org.git'}
 WORK_DIR=${WORK_DIR:='/home/node/'}
 REPO_DIR=${REPO_DIR:=${WORK_DIR}'openable.org'}
 
-echo "Setting up Repository -----------------------------------------------------"
 echo work-dir=${WORK_DIR}
 echo repo-dir=${REPO_DIR}
 
 cd ${WORK_DIR}
-
+echo "Setting up Repository -----------------------------------------------------"
 if [ -d ${REPO_DIR} ]; then
     
     echo "Repository exists, checking if up to date"
@@ -28,13 +27,9 @@ else
     else
         git clone -b ${BRANCH} ${REPO_URL}
     fi 
-    #git config --global --add safe.directory ${REPO_DIR}
-    #chown -R node:node ${REPO_DIR}
-    cd ${REPO_DIR}/app
-    npm install
-
 fi
-
+cd ${REPO_DIR}/app
+npm install
 
 cd ${REPO_DIR}/app
 npm start
