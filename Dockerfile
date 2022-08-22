@@ -10,5 +10,5 @@ RUN chmod 700 init.sh
 
 EXPOSE 8081
 
-ENTRYPOINT ["/bin/sh", "-c", "exec pwd "]
+ENTRYPOINT ["/bin/sh", "-c", "exec /home/node/init.sh "]
 
