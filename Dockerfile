@@ -2,6 +2,8 @@ FROM ubuntu:latest
 
 RUN apt-get update && apt-get -y --no-install-recommends install nodejs git npm
 
+RUN addgroup -g 1000 node && adduser -u 1000 -G node -s /bin/sh -D node 
+
 WORKDIR /home/node
 
 COPY init.sh init.sh
